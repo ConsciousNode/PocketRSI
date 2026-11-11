@@ -1,5 +1,7 @@
 # PocketRSI™ — A Little Guy in a Jar Who Gets Smarter While You Watch
 
+> **Audit note (2026-11-10):** the training, hash chain, quine, rewind and examiner are real and reproduce exactly. But the Rung 3 "discoveries" come from a hand-written optimizer ladder, and the Ouroboros collapse is scripted. See [AUDIT.md](AUDIT.md) for both, plus a genuine blind-mutation run and a genuine wireheading run.
+
 **ConsciousNode SoftWorks · Xinu Single-File Offline Laboratory**
 
 > **The Safety Story in One Sentence:** *It can only ever improve the file it's in.*

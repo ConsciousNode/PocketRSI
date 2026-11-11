@@ -1,0 +1,189 @@
+[
+ {
+  "mode": "ladder",
+  "cons": "constitution.js",
+  "N": 30,
+  "accepted": 15,
+  "curve": [
+   {
+    "gen": 5,
+    "exam": 0.3308,
+    "freshAcc": 0.241
+   },
+   {
+    "gen": 10,
+    "exam": 0.5187,
+    "freshAcc": 0.4973
+   },
+   {
+    "gen": 15,
+    "exam": 0.56,
+    "freshAcc": 0.5106
+   },
+   {
+    "gen": 20,
+    "exam": 0.59,
+    "freshAcc": 0.5687
+   },
+   {
+    "gen": 25,
+    "exam": 0.59,
+    "freshAcc": 0.5687
+   },
+   {
+    "gen": 30,
+    "exam": 0.5653,
+    "freshAcc": 0.5477
+   }
+  ],
+  "finalUpdate": "sub(mul(lr, lerp(div(m, add(sqrt(v), 0.02)), sign(m), 0.15)), mul(wd, w))"
+ },
+ {
+  "mode": "weights",
+  "cons": "constitution.js",
+  "N": 30,
+  "accepted": 21,
+  "curve": [
+   {
+    "gen": 5,
+    "exam": 0.2723,
+    "freshAcc": 0.1847
+   },
+   {
+    "gen": 10,
+    "exam": 0.3195,
+    "freshAcc": 0.2333
+   },
+   {
+    "gen": 15,
+    "exam": 0.3459,
+    "freshAcc": 0.268
+   },
+   {
+    "gen": 20,
+    "exam": 0.3639,
+    "freshAcc": 0.2749
+   },
+   {
+    "gen": 25,
+    "exam": 0.4013,
+    "freshAcc": 0.2894
+   },
+   {
+    "gen": 30,
+    "exam": 0.4102,
+    "freshAcc": 0.29
+   }
+  ],
+  "finalUpdate": "mul(lr, mul(0.5, clip(g, -0.3, 0.3)))"
+ },
+ {
+  "mode": "blind",
+  "cons": "constitution_blind.js",
+  "N": 30,
+  "accepted": 8,
+  "curve": [
+   {
+    "gen": 5,
+    "exam": 0.1918,
+    "freshAcc": 0.1101
+   },
+   {
+    "gen": 10,
+    "exam": 0.3365,
+    "freshAcc": 0.283
+   },
+   {
+    "gen": 15,
+    "exam": 0.3981,
+    "freshAcc": 0.366
+   },
+   {
+    "gen": 20,
+    "exam": 0.3981,
+    "freshAcc": 0.366
+   },
+   {
+    "gen": 25,
+    "exam": 0.4214,
+    "freshAcc": 0.4072
+   },
+   {
+    "gen": 30,
+    "exam": 0.4214,
+    "freshAcc": 0.4072
+   }
+  ],
+  "finalUpdate": "lerp(lerp(lerp(mul(lr, mul(0.5, clip(g, -0.3, 0.3))), tern_err, 0.0862), g, 0.1233), g, 0.1086)"
+ },
+ {
+  "mode": "ouro_real",
+  "cons": "constitution_ouro.js",
+  "N": 30,
+  "accepted": 29,
+  "curve": [
+   {
+    "gen": 5,
+    "selfDev": null,
+    "exam": 0.2937,
+    "freshAcc": 0.2064
+   },
+   {
+    "gen": 10,
+    "selfDev": null,
+    "exam": 0.3698,
+    "freshAcc": 0.2891
+   },
+   {
+    "gen": 15,
+    "selfDev": null,
+    "exam": 0.4285,
+    "freshAcc": 0.3301
+   },
+   {
+    "gen": 20,
+    "selfDev": null,
+    "exam": 0.4773,
+    "freshAcc": 0.4144
+   },
+   {
+    "gen": 25,
+    "selfDev": null,
+    "exam": 0.5535,
+    "freshAcc": 0.5194
+   },
+   {
+    "gen": 30,
+    "selfDev": null,
+    "exam": 0.571,
+    "freshAcc": 0.5559
+   }
+  ],
+  "finalUpdate": "mul(lr, mul(0.5, clip(g, -0.3, 0.3)))",
+  "finalScorer": "lerp(lerp(lerp(lerp(lerp(lerp(add(mul(0.8376, acc), mul(0.35, loss_term)), loss_term, 0.0943), loss_term, 0.1615), loss_term, 0.0849), loss_term, 0.098), loss_term, 0.1946), loss_term, 0.117)",
+  "recKeys": "gen,branch,parent_gen,parent_hash,rung,ouroboros,accepted,constitution_sha256,genome_sha256,weights_sha256,gen0_weights_sha256,genome_diff,seeds,steps,dev_scores,gate_results,param_bytes,code_chars,rationale,wall_clock_ms,timestamp_iso,record_sha256"
+ },
+ {
+  "mode": "ouro_shipped",
+  "cons": "constitution.js",
+  "N": 10,
+  "accepted": 10,
+  "curve": [
+   {
+    "gen": 5,
+    "selfDev": null,
+    "exam": 0.1698,
+    "freshAcc": 0.0911
+   },
+   {
+    "gen": 10,
+    "selfDev": null,
+    "exam": 0.1298,
+    "freshAcc": 0.0227
+   }
+  ],
+  "finalUpdate": "add(mul(-0.004, clip(g, -0.2, 0.2)), mul(0.03, w))",
+  "finalScorer": "lerp(acc, 0.997, 0.96)",
+  "recKeys": "gen,branch,parent_gen,parent_hash,rung,ouroboros,accepted,constitution_sha256,genome_sha256,weights_sha256,gen0_weights_sha256,genome_diff,seeds,steps,dev_scores,gate_results,param_bytes,code_chars,rationale,wall_clock_ms,timestamp_iso,record_sha256"
+ }
+]
